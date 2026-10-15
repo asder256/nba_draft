@@ -8,9 +8,9 @@ Open `dist/index.html` directly in a browser, or run `node serve.cjs` in this di
 
 ## Publish with GitHub Pages
 
-For this existing repository, commit the root `index.html`, `.nojekyll`, and the `draft-assistant/` directory. The root page redirects to the app. Choose Settings → Pages → Deploy from a branch → your chosen branch → / (root). Asset paths are relative, so a repository subpath works. No build step is required. The user handles committing and publication.
+This repository includes `.github/workflows/static.yml`, which publishes `dist/` when you push to `main`. In GitHub, choose Settings → Pages → Build and deployment → Source → **GitHub Actions**. Commit and push your changes, then check the **Deploy static content to Pages** run in the Actions tab. The app will be available at https://asder256.github.io/nba_draft/. No build step is required.
 
-For a separate repository, copy all five files inside `dist/` directly to its root. Alternatively, publish `draft-assistant/dist` as the Pages artifact through your own deployment workflow.
+For branch-based hosting instead, choose Deploy from a branch → main → / (root). The root `index.html` redirects to `dist/`. Asset paths are relative, so the repository subpath works. For a separate repository, you can also copy all five files inside `dist/` directly to its root.
 
 GitHub Pages hosting may make the supplied projection data accessible to site visitors; choose repository/hosting visibility appropriate to your intended personal use and source permissions.
 
